@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 
-import { NewComment, CommentList } from "../Comments/index";
+import { NewComment, CommentList } from "../Comments";
 
 import { likeImage, unlikeImage } from "../../store/actions";
 

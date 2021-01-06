@@ -1,7 +1,7 @@
 import React from "react";
 
-import { SortList } from "../SortList/index";
-import { SearchImage } from "../SearchImage/index";
+import { SortList } from "../SortList";
+import { SearchImage } from "../SearchImage";
 
 function Navbar(props) {
   return (

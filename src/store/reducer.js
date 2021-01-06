@@ -41,11 +41,15 @@ const reducer = (state = {}, action) => {
     }
 
     case actionTypes.SORT_MOST_LIKED: {
-      return { ...state, sortType: actionTypes.SORT_MOST_LIKED };
+      const { images } = state;
+      const data = images.sort((a, b) => b.likes - a.likes);
+      return { ...state, images: [...data], sortType: actionTypes.SORT_MOST_LIKED };
     }
 
     case actionTypes.SORT_MOST_COMMENTED: {
-      return { ...state, sortType: actionTypes.SORT_MOST_COMMENTED };
+      const { images } = state;
+      const data = images.sort((a, b) => b.comments.length - a.comments.length);
+      return { ...state, images: [...data], sortType: actionTypes.SORT_MOST_COMMENTED };
     }
 
     default: {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
-import { ImageCard } from "../ImageCard/index";
+import { ImageCard } from "../ImageCard";
 
 import {
   SORT_MOST_LIKED,
@@ -28,21 +28,8 @@ function ImageList(props) {
       );
     }
 
-    switch (sortType) {
-      case SORT_MOST_LIKED:
-        data = data.sort((a, b) => b.likes - a.likes);
-        break;
-
-      case SORT_MOST_COMMENTED:
-        data = data.sort((a, b) => a.comments.length - b.comments.length);
-        break;
-
-      default:
-        break;
-    }
-
     setImageList([...data]);
-  }, [sortType, images, searchText]);
+  }, [images, searchText]);
 
   return (
     <div className="grid-container">

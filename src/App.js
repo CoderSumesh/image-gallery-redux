@@ -2,9 +2,9 @@ import React from 'react';
 
 import Store from './store';
 
-import { Header } from './components/Header/index';
-import { Navbar } from './components/Navbar/index';
-import { ImageList } from './components/ImageList/index';
+import { Header } from './components/Header';
+import { Navbar } from './components/Navbar';
+import { ImageList } from './components/ImageList';
 
 import './style.scss'
 
