@@ -6,12 +6,17 @@ import { searchImage } from "../../store/actions";
 function SearchImage(props) {
   const { searchImageList } = props;
 
+  const handleSearch = event => {
+    const {value} = event.currentTarget
+    searchImageList(value)
+  };
+
   return (
     <div className="search-box-wrapper">
       <input
         className="search-box"
         placeholder="Search images..."
-        onChange={(event) => searchImageList(event.currentTarget.value)}
+        onChange={handleSearch}
       />
     </div>
   );

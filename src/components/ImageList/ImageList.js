@@ -34,7 +34,7 @@ function ImageList(props) {
   return (
     <div className="grid-container">
       {isLoading ? (
-        <span>Loading...</span>
+        <span className="spinner">Loading...</span>
       ) : (
         imageList.map((item) => (
           <div key={item.id} className="grid-item">
