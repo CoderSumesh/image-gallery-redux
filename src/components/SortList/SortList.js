@@ -3,7 +3,10 @@ import { connect } from "react-redux";
 
 import {
   SORT_MOST_LIKED,
-  SORT_MOST_COMMENTED,
+  SORT_MOST_COMMENTED
+} from "../../store/actionTypes";
+
+import {
   sortMostLiked,
   sortMostCommented,
 } from "../../store/actions";

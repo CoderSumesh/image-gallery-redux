@@ -1,22 +1,9 @@
 import axios from "axios";
-
-import data from "./data";
-
-export const FETCH_REQUEST = "FETCH_REQUEST";
-export const FETCH_SUCCESS = "FETCH_SUCCESS";
-
-export const SORT_MOST_LIKED = "SORT_MOST_LIKED";
-export const SORT_MOST_COMMENTED = "SORT_MOST_COMMENTED";
-
-export const ADD_COMMENT = "ADD_COMMENT";
-
-export const SEARCH_IMAGE = "SEARCH_IMAGE";
-
-export const LIKE_IMAGE = "LIKE_IMAGE";
-export const UNLIKE_IMAGE = "UNLIKE_IMAGE";
+import * as actionTypes from "./actionTypes"
+import data from "../mock/data";
 
 export const searchImage = (searchText) => ({
-  type: SEARCH_IMAGE,
+  type: actionTypes.SEARCH_IMAGE,
   payload: searchText,
 });
 
@@ -25,34 +12,34 @@ export const sortImage = (type) => ({
 });
 
 export const sortMostLiked = () => ({
-  type: SORT_MOST_LIKED,
+  type: actionTypes.SORT_MOST_LIKED,
 });
 
 export const sortMostCommented = () => ({
-  type: SORT_MOST_COMMENTED,
+  type: actionTypes.SORT_MOST_COMMENTED,
 });
 
 export const addComment = (imageId, comment) => ({
-  type: ADD_COMMENT,
+  type: actionTypes.ADD_COMMENT,
   payload: { id: imageId, comment },
 });
 
 export const likeImage = (imageId) => ({
-  type: LIKE_IMAGE,
+  type: actionTypes.LIKE_IMAGE,
   payload: imageId,
 });
 
 export const unlikeImage = (imageId) => ({
-  type: UNLIKE_IMAGE,
+  type: actionTypes.UNLIKE_IMAGE,
   payload: imageId,
 });
 
 export const fetchImageRequest = () => ({
-  type: FETCH_REQUEST,
+  type: actionTypes.FETCH_REQUEST,
 });
 
 const fetchImageSuccess = (images) => ({
-  type: FETCH_SUCCESS,
+  type: actionTypes.FETCH_SUCCESS,
   payload: images,
 });
 

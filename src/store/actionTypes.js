@@ -1,0 +1,13 @@
+
+export const FETCH_REQUEST = "FETCH_REQUEST";
+export const FETCH_SUCCESS = "FETCH_SUCCESS";
+
+export const SORT_MOST_LIKED = "SORT_MOST_LIKED";
+export const SORT_MOST_COMMENTED = "SORT_MOST_COMMENTED";
+
+export const ADD_COMMENT = "ADD_COMMENT";
+
+export const SEARCH_IMAGE = "SEARCH_IMAGE";
+
+export const LIKE_IMAGE = "LIKE_IMAGE";
+export const UNLIKE_IMAGE = "UNLIKE_IMAGE";
