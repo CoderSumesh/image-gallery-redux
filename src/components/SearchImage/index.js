@@ -1,1 +1,1 @@
-export {default as SearchImage} from './SearchImage'
+export {default as SearchImage} from './SearchImage.connect'

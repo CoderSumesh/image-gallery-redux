@@ -1,15 +1,9 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import {
   SORT_MOST_LIKED,
   SORT_MOST_COMMENTED
 } from "../../store/actionTypes";
-
-import {
-  sortMostLiked,
-  sortMostCommented,
-} from "../../store/actions";
 
 const SortList = (props) => {
   const { sortType, sortImageMostLiked, sortImageMostCommented } = props;
@@ -32,16 +26,4 @@ const SortList = (props) => {
   );
 }
 
-const mapStateToProps = (state) => {
-  const { sortType } = state;
-  return { sortType };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    sortImageMostLiked: () => dispatch(sortMostLiked()),
-    sortImageMostCommented: () => dispatch(sortMostCommented()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SortList);
+export default SortList;

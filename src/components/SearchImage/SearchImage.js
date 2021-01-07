@@ -1,7 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-
-import { searchImage } from "../../store/actions";
 
 const SearchImage = ({ searchImageList }) => {
   const handleSearch = (event) => {
@@ -20,10 +17,5 @@ const SearchImage = ({ searchImageList }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    searchImageList: (search) => dispatch(searchImage(search)),
-  };
-};
 
-export default connect(null, mapDispatchToProps)(SearchImage);
+export default SearchImage;

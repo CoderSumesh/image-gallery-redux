@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
-
-import { addComment } from "../../store/actions";
 
 const NewComment = ({ imageId, postComment }) => {
   const [value, setValue] = useState("");
@@ -33,10 +30,4 @@ const NewComment = ({ imageId, postComment }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    postComment: (id, comment) => dispatch(addComment(id, comment)),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(NewComment);
+export default NewComment;

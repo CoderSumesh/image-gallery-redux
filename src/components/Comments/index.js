@@ -1,2 +1,2 @@
 export {default as CommentList} from './CommentList';
-export {default as NewComment} from './NewComment';
+export {default as NewComment} from './NewComment.connect';

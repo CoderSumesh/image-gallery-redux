@@ -1,1 +1,1 @@
-export {default as SortList} from './SortList'
+export {default as SortList} from './SortList.connect'

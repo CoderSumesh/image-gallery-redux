@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 
 import { NewComment, CommentList } from "../Comments";
-
-import { likeImage, unlikeImage } from "../../store/actions";
 
 const ImageCard = (props) => {
   const {
@@ -58,11 +55,4 @@ const ImageCard = (props) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setLike: (id) => dispatch(likeImage(id)),
-    setUnlike: (id) => dispatch(unlikeImage(id)),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(ImageCard);
+export default ImageCard;

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
 
 import { ImageCard } from "../ImageCard";
-
-import { fetchImages } from "../../store/actions";
 
 const ImageList = (props) => {
   const { isLoading, images, fetchImages, searchText } = props;
@@ -42,13 +39,4 @@ const ImageList = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const { isLoading, images, searchText } = state;
-  return { isLoading, images, searchText };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchImages: () => dispatch(fetchImages()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ImageList);
+export default ImageList;
