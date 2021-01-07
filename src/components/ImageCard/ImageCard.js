@@ -7,7 +7,7 @@ import { NewComment, CommentList } from "../Comments";
 
 import { likeImage, unlikeImage } from "../../store/actions";
 
-function ImageCard(props) {
+const ImageCard = (props) => {
   const {
     setLike,
     setUnlike,
@@ -56,7 +56,7 @@ function ImageCard(props) {
       </Modal>
     </div>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

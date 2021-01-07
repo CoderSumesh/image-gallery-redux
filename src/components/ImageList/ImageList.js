@@ -3,14 +3,10 @@ import { connect } from "react-redux";
 
 import { ImageCard } from "../ImageCard";
 
-import {
-  SORT_MOST_LIKED,
-  SORT_MOST_COMMENTED,
-  fetchImages,
-} from "../../store/actions";
+import { fetchImages } from "../../store/actions";
 
-function ImageList(props) {
-  const { isLoading, images, fetchImages, sortType, searchText } = props;
+const ImageList = (props) => {
+  const { isLoading, images, fetchImages, searchText } = props;
 
   const [imageList, setImageList] = useState(images);
 
@@ -31,24 +27,24 @@ function ImageList(props) {
     setImageList([...data]);
   }, [images, searchText]);
 
-  return (
+  return isLoading ? (
+    <div className="text-center">Loading...</div>
+  ) : !imageList.length ? (
+    <div className="text-center">No record found</div>
+  ) : (
     <div className="grid-container">
-      {isLoading ? (
-        <span className="spinner">Loading...</span>
-      ) : (
-        imageList.map((item) => (
-          <div key={item.id} className="grid-item">
-            <ImageCard data={{ ...item }} />
-          </div>
-        ))
-      )}
+      {imageList.map((item) => (
+        <div key={item.id} className="grid-item">
+          <ImageCard data={{ ...item }} />
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 const mapStateToProps = (state) => {
-  const { isLoading, images, sortType, searchText } = state;
-  return { isLoading, images, sortType, searchText };
+  const { isLoading, images, searchText } = state;
+  return { isLoading, images, searchText };
 };
 
 const mapDispatchToProps = (dispatch) => ({

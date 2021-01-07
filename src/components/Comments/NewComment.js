@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 
 import { addComment } from "../../store/actions";
 
-function NewComment(props) {
-  const { imageId, postComment } = props;
+const NewComment = ({ imageId, postComment }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
@@ -32,7 +31,7 @@ function NewComment(props) {
       </div>
     </div>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

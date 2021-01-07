@@ -8,7 +8,7 @@ import {
   sortMostCommented,
 } from "../../store/actions";
 
-function SortList(props) {
+const SortList = (props) => {
   const { sortType, sortImageMostLiked, sortImageMostCommented } = props;
 
   return (

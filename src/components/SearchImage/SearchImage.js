@@ -3,12 +3,10 @@ import { connect } from "react-redux";
 
 import { searchImage } from "../../store/actions";
 
-function SearchImage(props) {
-  const { searchImageList } = props;
-
-  const handleSearch = event => {
-    const {value} = event.currentTarget
-    searchImageList(value)
+const SearchImage = ({ searchImageList }) => {
+  const handleSearch = (event) => {
+    const { value } = event.currentTarget;
+    searchImageList(value);
   };
 
   return (
@@ -20,7 +18,7 @@ function SearchImage(props) {
       />
     </div>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -3,7 +3,7 @@ import React from "react";
 import { SortList } from "../SortList";
 import { SearchImage } from "../SearchImage";
 
-function Navbar(props) {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="flex-container font-30">
@@ -17,6 +17,6 @@ function Navbar(props) {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
